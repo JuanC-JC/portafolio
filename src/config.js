@@ -1,18 +1,18 @@
 module.exports = {
-  email: "isabelajimenezs96@gmail.com",
+  email: "juancchaparro97@gmail.com",
 
   socialMedia: [
     {
       name: "GitHub",
-      url: "https://github.com/isabelajs",
+      url: "https://github.com/JuanC-JC",
     },
     {
       name: "Twitter",
-      url: "https://twitter.com/isabelajs",
+      url: "https://twitter.com/JuanCamiloIbae3",
     },
     {
       name: "Linkedin",
-      url: "https://www.linkedin.com/in/isabela-jimenez-salazar-166aa993/",
+      url: "https://www.linkedin.com/in/juan-camilo-iba%C3%B1ez-chaparro-46610b129/",
     },
   ],
 

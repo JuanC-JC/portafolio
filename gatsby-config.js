@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://isajs.netlify.app",
-    title: "Isabela Jimenez",
+    // siteUrl: "https://isajs.netlify.app",
+    title: "Juan Camilo",
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
