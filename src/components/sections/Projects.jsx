@@ -2,7 +2,8 @@ import React, { useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Icon } from '@components/icons';
-import '../../styles/components/sections/projects.scss'
+
+import '@styles/components/sections/projects.scss'
 
 export default function Projects() {
   const data = useStaticQuery(graphql`
@@ -43,7 +44,6 @@ export default function Projects() {
             const { title, external, github, description, image, tecnologies } = node.frontmatter
             const img = getImage(image);
 
-            console.log(description)
             return (
               <li className="project" key={i} ref={el => (revealProjects.current[i] = el)} >
                 <div className="project-content">
