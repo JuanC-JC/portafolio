@@ -1,14 +1,6 @@
 import React from "react";
 import "../styles/general.scss";
-import {
-  Layout,
-  Hero,
-  About,
-  Jobs,
-  Featured,
-  Projects,
-  Contact,
-} from "@components";
+import { Layout, Hero, About, Jobs, Projects, Contact } from "@components";
 
 const IndexPage = ({ location }) => {
   return (
@@ -16,6 +8,7 @@ const IndexPage = ({ location }) => {
       <Hero />
       <About />
       <Jobs />
+      <Projects />
     </Layout>
   );
 };

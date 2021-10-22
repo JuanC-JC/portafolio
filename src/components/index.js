@@ -9,3 +9,4 @@ export { default as Email } from "./Email";
 export { default as Hero } from "./sections/Hero";
 export { default as About } from "./sections/About";
 export { default as Jobs } from "./sections/Jobs";
+export { default as Projects } from "./sections/Projects";
