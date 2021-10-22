@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Head, Header, Social, Email, Footer } from '@components';
+import { Header, Social, Email, Footer } from '@components';
 import '../styles/components/layout.scss';
 
 

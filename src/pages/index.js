@@ -9,6 +9,7 @@ const IndexPage = ({ location }) => {
       <About />
       <Jobs />
       <Projects />
+      <Contact />
     </Layout>
   );
 };

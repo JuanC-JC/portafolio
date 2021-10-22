@@ -34,14 +34,13 @@ export default function Jobs() {
       <div className="inner">
 
         <div className="tabList" role="tablist" aria-label="Job tabs">
-          {
+          {jobsData &&
             jobsData.map((node, i) => {
               const { company } = node.frontmatter;
               return (
                 <button
                   key={i}
                   className={`tabButton ${activeTabId === i ? 'active' : ''} `}
-                  // isActive={activeTabId === i}
                   onClick={() => setActiveTabId(i)}
                   ref={el => (tabs.current[i] = el)}
                   id={`tab-${i}`}
@@ -57,7 +56,7 @@ export default function Jobs() {
         </div>
 
         <div className="tabPanels">
-          {
+          {jobsData &&
             jobsData.map((node, i) => {
               const { title, url, company, range, activities } = node.frontmatter
               return (
@@ -84,7 +83,7 @@ export default function Jobs() {
 
                   <div className='activities'>
                     <ul>
-                      {
+                      {activities &&
                         activities.map((act, i) => {
                           return (
                             <li key={i}>{act.activity}</li>
