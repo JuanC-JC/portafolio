@@ -10,7 +10,7 @@
 
   h1 {
     margin: 0 0 20px 2px;
-    color: $purple;
+    color: var(--color-second);
     font-family: $font-mono;
     font-size: clamp($fz-sm, 5vw, $fz-md);
     font-weight: 400;
@@ -22,7 +22,7 @@
 
   h3 {
     margin-top: 10px;
-    color: $slate;
+    color: var(--color-letter);
     line-height: 0.9;
   }
 

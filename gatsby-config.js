@@ -29,18 +29,10 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "job",
-        path: "./content/job/",
+        name: "content",
+        path: "./content/",
       },
-      __key: "job",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "projects",
-        path: "./content/projects/",
-      },
-      __key: "projects",
+      __key: "content",
     },
     {
       resolve: "gatsby-source-filesystem",

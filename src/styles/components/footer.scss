@@ -17,7 +17,7 @@
       width: 100%;
       max-width: 270px;
       margin: 0 auto 10px;
-      color: $light-slate;
+      color: var(--color-letter-light);
     }
 
     ul {
@@ -40,7 +40,7 @@
   .credit {
     display: flex;
     flex-direction: column;
-    color: $light-slate;
+    color: var(--color-letter-light);
     font-family: $font-mono;
     font-size: $fz-xxs;
     line-height: 1;

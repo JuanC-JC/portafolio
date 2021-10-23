@@ -34,7 +34,7 @@
             content: "▹";
             position: absolute;
             left: 0;
-            color: $purple;
+            color: var(--color-second);
             font-size: $fz-sm;
             line-height: 12px;
           }
@@ -57,7 +57,7 @@
         position: relative;
         width: 100%;
         border-radius: $border-radius;
-        background-color: $purple;
+        background-color: var(--color-second);
 
         &:hover,
         &:focus {
@@ -97,12 +97,12 @@
         &:before {
           top: 0;
           left: 0;
-          background-color: $navy;
+          background-color: var(--color-main);
           mix-blend-mode: screen;
         }
 
         &:after {
-          border: 2px solid $purple;
+          border: 2px solid var(--color-second);
           top: 20px;
           left: 20px;
           z-index: -1;

@@ -111,14 +111,14 @@
 
       .project-overline {
         margin: 10px 0;
-        color: $purple;
+        color: var(--color-second);
         font-family: $font-mono;
         font-size: $fz-xs;
         font-weight: 400;
       }
 
       .project-title {
-        color: $lightest-slate;
+        color: var(--color-letter-lightest);
         font-size: clamp(24px, 5vw, 28px);
 
         @media (min-width: 768px) {
@@ -126,7 +126,7 @@
         }
 
         @media (max-width: 768px) {
-          color: $white;
+          // color: var(--color-white);
 
           a {
             position: static;
@@ -151,8 +151,8 @@
         z-index: 2;
         padding: 25px;
         border-radius: $border-radius;
-        background-color: $light-navy;
-        color: $light-slate;
+        background-color: var(--color-main-light);
+        color: var(--color-letter-light);
         font-size: $fz-lg;
 
         @media (max-width: 768px) {
@@ -170,7 +170,8 @@
         }
 
         strong {
-          color: $white;
+          // color: $white;
+          color: var(--color-white);
           font-weight: normal;
         }
       }
@@ -186,7 +187,7 @@
 
         li {
           margin: 0 20px 5px 0;
-          color: $light-slate;
+          color: var(--color-letter-light);
           font-family: $font-mono;
           font-size: $fz-xs;
           white-space: nowrap;
@@ -197,7 +198,7 @@
 
           li {
             margin: 0 10px 5px 0;
-            color: $lightest-slate;
+            color: var(--color-letter-lightest);
           }
         }
       }
@@ -208,7 +209,7 @@
         position: relative;
         margin-top: 10px;
         margin-left: -10px;
-        color: $lightest-slate;
+        color: var(--color-letter-lightest);
 
         a {
           @include flexCenter;
@@ -245,7 +246,7 @@
         a {
           width: 100%;
           height: 100%;
-          background-color: $purple;
+          background-color: var(--color-second);
           border-radius: $border-radius;
           vertical-align: middle;
 
@@ -272,7 +273,7 @@
             bottom: 0;
             z-index: 3;
             transition: $transition;
-            background-color: $navy;
+            background-color: var(--color-main);
             mix-blend-mode: screen;
           }
         }

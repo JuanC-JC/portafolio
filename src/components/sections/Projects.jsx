@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <section id='projects'>
       <h2 className="numbered-heading" ref={revealTitle}>
-        Algo de lo que construido
+        Proyectos
       </h2>
 
       <ul className='projectsGrid'>
@@ -54,7 +54,7 @@ export default function Projects() {
                       <a href={external}>{title}</a>
                     </h3>
 
-                    <div className="project-description">{description}</div>
+                    <div className="project-description"><p>{description}</p></div>
 
                     {tecnologies.length && (
                       <ul className="project-tech-list">

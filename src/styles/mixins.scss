@@ -22,42 +22,15 @@
   &:hover,
   &:active,
   &:focus {
-    color: $purple;
+    color: var(--color-second);
     outline: 0;
   }
 }
 
 @mixin inlineLink {
-  display: inline-block;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-  position: relative;
-  transition: $transition;
-  color: $purple;
-  &:hover,
-  &:focus,
-  &:active {
-    color: $purple;
-    outline: 0;
-    &:after {
-      width: 100%;
-    }
-    & > * {
-      color: $purple !important;
-      transition: $transition;
-    }
-  }
-  &:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 1px;
-    position: relative;
-    bottom: 0.37em;
-    background-color: $purple;
-    transition: $transition;
-    opacity: 0.5;
-  }
+
+  color: var(--color-second);
+
 }
 
 @mixin smallButton {
@@ -65,12 +38,12 @@
 }
 
 @mixin boxShadow {
-  box-shadow: 0 10px 30px -15px $navy-shadow;
+  box-shadow: 0 10px 30px -15px var(--color-main-shadow);
   transition: $transition;
 
   &:hover,
   &:focus {
-    box-shadow: 0 20px 30px -15px $navy-shadow;
+    box-shadow: 0 20px 30px -15px var(--color-main-shadow);
   }
 }
 
@@ -87,7 +60,7 @@
       content: "▹";
       position: absolute;
       left: 0;
-      color: $purple;
+      color: var(--color-second);
     }
   }
 }
