@@ -2,8 +2,8 @@
 title: Calidad
 company: Mavalle
 dateRange:
-  finish: 2021-10-21T05:00:00.000Z
-  init: 2021-06-03T19:37:48.150Z
+  finish: 2019-02-08T19:37:48.150Z
+  init: 2018-08-08T19:37:48.150Z
 url: https://www.mavalle.com
 activities:
   - activity: Acompañamiento, seguimiento y control de los procesos conforme los

@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+
 import '../../styles/components/sections/jobs.scss'
+import {translateDate, transformDate} from '@utils'
 
 export default function Jobs() {
   const revealContainer = useRef(null);
@@ -13,8 +15,8 @@ export default function Jobs() {
             company
             description
             dateRange{
-              init(formatString: "MMMM, YYYY")
-              finish(formatString: "MMMM, YYYY")
+              init(formatString: "MMMM YYYY")
+              finish
             }
             title
             url
@@ -83,7 +85,7 @@ export default function Jobs() {
                     </span>
                   </h3>
 
-                  <p className="range">{dateRange.init}{dateRange.finish}</p>
+                  <p className="range">{translateDate(dateRange.init)} - {dateRange.finish ? transformDate(dateRange.finish) : 'actualidad'}</p>
 
                   <div className='activities'>
                     <ul>

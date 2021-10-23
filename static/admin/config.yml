@@ -30,6 +30,7 @@ collections:
               name: "finish",
               default: "",
               widget: "datetime",
+              required: false,
             }
 
       - { label: "Url", name: "url", widget: "string" }
