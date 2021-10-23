@@ -1,9 +1,10 @@
 ---
-title: nuevo test
-company: seon
+title: Co-founder
+company: 5eon
 description: slakdfjlksajd
 range: jalsjdfjasdlj
 url: lkjasdlkfjkasdf
 activities:
-  - activity: sadfsadfa
+  - activity: Desing and development products
+  - activity: Production manager
 ---
