@@ -36,3 +36,6 @@
   // 3. Default to light
   setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
 })();
+
+
+console.log('tesst')

@@ -71,13 +71,21 @@
         text-align: left;
         white-space: nowrap;
         color: var(--color-letter);
-        .active {
+
+        &.active {
           color: var(--color-second);
+          border-bottom: 2px solid var(--color-second);
+
+          @media (min-width:768px){
+            border-bottom: 0;
+            border-left: 2px solid var(--color-second);
+          }
         }
 
         @media (max-width: 768px) {
           padding: 0 15px 2px;
         }
+
         @media (max-width: 600px) {
           @include flexCenter;
           min-width: 120px;
