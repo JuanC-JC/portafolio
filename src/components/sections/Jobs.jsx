@@ -12,7 +12,10 @@ export default function Jobs() {
           frontmatter {
             company
             description
-            range
+            dateRange{
+              init(formatString: "MMMM, YYYY")
+              finish(formatString: "MMMM, YYYY")
+            }
             title
             url
             activities {
@@ -23,6 +26,7 @@ export default function Jobs() {
       }
     }  
   `);
+
   const jobsData = data.jobs.nodes;
   const tabs = useRef([]);
   const [activeTabId, setActiveTabId] = useState(0);
@@ -58,7 +62,7 @@ export default function Jobs() {
         <div className="tabPanels">
           {jobsData &&
             jobsData.map((node, i) => {
-              const { title, url, company, range, activities } = node.frontmatter
+              const { title, url, company, dateRange, activities } = node.frontmatter
               return (
                 <div
                   key={i}
@@ -79,7 +83,7 @@ export default function Jobs() {
                     </span>
                   </h3>
 
-                  <p className="range">{range}</p>
+                  <p className="range">{dateRange.init}{dateRange.finish}</p>
 
                   <div className='activities'>
                     <ul>

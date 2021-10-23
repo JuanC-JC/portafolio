@@ -13,14 +13,25 @@ collections:
     create: true
     media_folder: "assets"
     public_folder: "assets"
-    path: "{{company}}]/{{title}}/index"
+    path: "{{company}}/{{title}}/index"
     editor:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Company", name: "company", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Range", name: "range", widget: "string" }
+
+      - label: "Fechas de la experiencia"
+        name: "dateRange"
+        widget: "object"
+        fields:
+          - { label: "Fecha de Inicio", name: "init", widget: "datetime" }
+          - {
+              label: "Fecha de Finalización",
+              name: "finish",
+              default: "",
+              widget: "datetime",
+            }
+
       - { label: "Url", name: "url", widget: "string" }
       - label: "Activities"
         name: "activities"
