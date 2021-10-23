@@ -13,7 +13,7 @@ collections:
     create: true
     media_folder: "assets"
     public_folder: "assets"
-    path: "{{title}}/index"
+    path: "{{company}}]/{{title}}/index"
     editor:
       preview: false
     fields:

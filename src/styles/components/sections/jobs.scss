@@ -3,6 +3,7 @@
 
 .jobs {
   max-width: 700px;
+  // background: white;
 
   .inner {
     display: flex;
@@ -27,15 +28,8 @@
       @media (max-width: 600px) {
         display: flex;
         overflow-x: auto;
-        width: calc(100% + 100px);
-        padding-left: 50px;
-        margin-left: -50px;
+        width:100%;
         margin-bottom: 30px;
-      }
-      @media (max-width: 480px) {
-        width: calc(100% + 50px);
-        padding-left: 25px;
-        margin-left: -25px;
       }
 
       li {
@@ -71,12 +65,13 @@
         text-align: left;
         white-space: nowrap;
         color: var(--color-letter);
+        min-width: min-content;
 
         &.active {
           color: var(--color-second);
           border-bottom: 2px solid var(--color-second);
 
-          @media (min-width:768px){
+          @media (min-width:600px){
             border-bottom: 0;
             border-left: 2px solid var(--color-second);
           }
@@ -88,7 +83,6 @@
 
         @media (max-width: 600px) {
           @include flexCenter;
-          min-width: 120px;
           padding: 0 15px;
           border-left: 0;
           border-bottom: 2px solid var(--color-third);
