@@ -55,6 +55,7 @@ collections:
       - { label: "Imagen", name: "image", choose_url: false, widget: "image" }
       - { label: "Github", name: "github", widget: "string" }
       - { label: "External", name: "external", widget: "string" }
+      - { label: "Mockup", name: "mockup", widget: "string" }
       - label: "Tecnologies"
         name: "tecnologies"
         widget: "list"
