@@ -5,6 +5,7 @@ description: Se creó una SPA (Single page application) para un emprendimiento
 image: assets/main.jpg
 github: https://github.com/isabelajs/5EON
 external: https://5eon.netlify.app
+mockup: https://www.figma.com/file/fDLfcGee4FpbxD47yfnVPb/prototype?node-id=0%3A1
 tecnologies:
   - "Vanilla JavaScript "
   - Html

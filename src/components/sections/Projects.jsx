@@ -21,6 +21,7 @@ export default function Projects() {
             description
             tecnologies
             github
+            mockup
             external
           }
         }
@@ -41,7 +42,7 @@ export default function Projects() {
       <ul className='projectsGrid'>
         {featuredProjects &&
           featuredProjects.map((node, i) => {
-            const { title, external, github, description, image, tecnologies } = node.frontmatter
+            const { title, external, github, description, mockup , image, tecnologies } = node.frontmatter
             const img = getImage(image);
 
             return (
@@ -70,6 +71,13 @@ export default function Projects() {
                           <Icon name="GitHub" />
                         </a>
                       )}
+                      {
+                        mockup && (
+                          <a href={mockup} aria-label="Mockup Link">
+                          <Icon name="Figma" />
+                        </a>
+                        )
+                      }
                       {external && (
                         <a href={external} aria-label="External Link" className="external">
                           <Icon name="External" />
