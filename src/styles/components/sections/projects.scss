@@ -210,7 +210,6 @@
         color: var(--color-letter-lightest);
 
         a {
-          @include flexCenter;
           padding: 10px;
 
           &.external {
