@@ -33,8 +33,8 @@
   // PICK THE INITIAL THEME
   // 1. Use the theme from localStorage, if any
   // 2. Use the OS theme, if any
-  // 3. Default to light
-  setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
+  // 3. Default dark
+  setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'dark'));
 })();
 
 

@@ -2,7 +2,7 @@
 title: Co-Founder
 company: 5EON
 dateRange:
-  finish: 2021-02-28T05:00:00.000Z
+  finish: ""
   init: 2019-11-01T19:59:22.768Z
 url: https://5eon.netlify.app
 activities:

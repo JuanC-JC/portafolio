@@ -126,7 +126,6 @@
         }
 
         @media (max-width: 768px) {
-          // color: var(--color-white);
 
           a {
             position: static;
@@ -170,7 +169,6 @@
         }
 
         strong {
-          // color: $white;
           color: var(--color-white);
           font-weight: normal;
         }
@@ -246,22 +244,10 @@
         a {
           width: 100%;
           height: 100%;
-          background-color: var(--color-second);
           border-radius: $border-radius;
           vertical-align: middle;
-
-          &:hover,
-          &:focus {
-            background: transparent;
-            outline: 0;
-
-            &:before,
-            .img {
-              background: transparent;
-              filter: none;
-            }
-          }
-
+          overflow: hidden;
+          
           &:before {
             content: "";
             position: absolute;
@@ -273,15 +259,46 @@
             bottom: 0;
             z-index: 3;
             transition: $transition;
-            background-color: var(--color-main);
+            transition: none;
             mix-blend-mode: screen;
           }
+
+          
+
+          @media(min-width:768px){
+            &:hover{
+              transform: scale(1.025);
+            }
+          }
+          
+          @media(max-width:768px){
+
+            background-color: var(--color-second);
+
+            &:hover,
+            &:focus {
+              background: transparent;
+              outline: 0;
+  
+              &:before,
+              .img {
+                background: transparent;
+                filter: none;
+              }
+            }
+
+            &::before{
+              background-color: var(--color-main);
+            }
+          }
+
         }
 
         .img {
           border-radius: $border-radius;
           mix-blend-mode: multiply;
-          filter: grayscale(100%) contrast(1) brightness(90%);
+          transition: $transition;
+        
 
           @media (max-width: 768px) {
             object-fit: cover;

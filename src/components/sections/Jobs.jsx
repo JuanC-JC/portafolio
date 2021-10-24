@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import '../../styles/components/sections/jobs.scss'
@@ -6,32 +6,38 @@ import {translateDate, transformDate} from '@utils'
 
 export default function Jobs() {
   const revealContainer = useRef(null);
+
+
+  
+  
   const data = useStaticQuery(graphql`
-    query MyQuery {
-      jobs: allMdx(filter: {fileAbsolutePath: {regex: "/job/"}}) {
-        nodes {
-          id
-          frontmatter {
-            company
-            description
-            dateRange{
-              init(formatString: "MMMM YYYY")
-              finish
-            }
-            title
-            url
-            activities {
-              activity
-            }
+  query MyQuery {
+    jobs: allMdx(filter: {fileAbsolutePath: {regex: "/job/"}}
+    sort: {fields: frontmatter___dateRange___init} ) {
+      nodes {
+        id
+        frontmatter {
+          company
+          description
+          dateRange{
+            init(formatString: "MMMM YYYY")
+            finish
+          }
+          title
+          url
+          activities {
+            activity
           }
         }
       }
-    }  
+    }
+  }  
   `);
 
-  const jobsData = data.jobs.nodes;
-  const tabs = useRef([]);
-  const [activeTabId, setActiveTabId] = useState(0);
+
+  const jobsData = [...data.jobs.nodes]
+  
+  const [activatedJob, setActivatedJob] = useState(jobsData[0]);
 
   return (
     <section id="jobs" className='jobs' ref={revealContainer}>
@@ -41,19 +47,15 @@ export default function Jobs() {
 
         <div className="tabList" role="tablist" aria-label="Job tabs">
           {jobsData &&
-            jobsData.map((node, i) => {
+            jobsData.reverse().map((node) => {
+
               const { company } = node.frontmatter;
               return (
                 <button
-                  key={i}
-                  className={`tabButton ${activeTabId === i ? 'active' : ''} `}
-                  onClick={() => setActiveTabId(i)}
-                  ref={el => (tabs.current[i] = el)}
-                  id={`tab-${i}`}
+                  className={`tabButton ${activatedJob.id === node.id ? 'active' : ''} `}
+                  onClick={() => {setActivatedJob(node)}}
                   role="tab"
-                  tabIndex={activeTabId === i ? '0' : '-1'}
-                  aria-selected={activeTabId === i ? true : false}
-                  aria-controls={`panel-${i}`}>
+                  >
                   <span>{company}</span>
                 </button>
               )
@@ -63,46 +65,37 @@ export default function Jobs() {
 
         <div className="tabPanels">
           {jobsData &&
-            jobsData.map((node, i) => {
-              const { title, url, company, dateRange, activities } = node.frontmatter
-              return (
-                <div
-                  key={i}
-                  className="tabPanel"
-                  id={`panel-${i}`}
-                  role="tabpanel"
-                  tabIndex={activeTabId === i ? '0' : '-1'}
-                  aria-labelledby={`tab-${i}`}
-                  aria-hidden={activeTabId !== i}
-                  hidden={activeTabId !== i}>
-                  <h3>
-                    <span>{title}</span>
-                    <span className="company">
-                      &nbsp;@&nbsp;
-                      <a href={url} className="inline-link">
-                        {company}
-                      </a>
-                    </span>
-                  </h3>
+            <div
+              className="tabPanel"
+              role="tabpanel"
+              >
+              <h3>
+                <span>{activatedJob.frontmatter.title}</span>
+                <span className="company">
+                  &nbsp;@&nbsp;
+                  <a href={activatedJob.frontmatter.url} className="inline-link">
+                    {activatedJob.frontmatter.company}
+                  </a>
+                </span>
+              </h3>
 
-                  <p className="range">{translateDate(dateRange.init)} - {dateRange.finish ? transformDate(dateRange.finish) : 'actualidad'}</p>
+              <p className="range">{translateDate(activatedJob.frontmatter.dateRange.init)} - {activatedJob.frontmatter.dateRange.finish ? transformDate(activatedJob.frontmatter.dateRange.finish) : 'actualidad'}</p>
 
-                  <div className='activities'>
-                    <ul>
-                      {activities &&
-                        activities.map((act, i) => {
-                          return (
-                            <li key={i}>{act.activity}</li>
-                          )
-                        })
-                      }
-                    </ul>
-                  </div>
-                </div>
-              )
-            })
+              <div className='activities'>
+                <ul>
+                  {activatedJob.frontmatter.activities &&
+                    activatedJob.frontmatter.activities.map((act, i) => {
+                      return (
+                        <li key={i}>{act.activity}</li>
+                      )
+                    })
+                  }
+                </ul>
+              </div>
+            </div>
           }
         </div>
+
 
       </div>
 

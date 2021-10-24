@@ -84,7 +84,7 @@ export default function Projects() {
 
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
+                  <a className='notHover' target='_blank'  href={external ? external : github ? github : '#'}>
                     <GatsbyImage image={img} alt={title} className="img" />
                   </a>
                 </div>
