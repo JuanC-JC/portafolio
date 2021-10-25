@@ -83,6 +83,12 @@
             grid-column: 1 / -1;
           }
         }
+
+        .project-title{
+          @media(min-width:768px){
+            margin-left: auto;
+          }
+        }
       }
 
       .project-content {
@@ -120,8 +126,11 @@
       .project-title {
         color: var(--color-letter-lightest);
         font-size: clamp(24px, 5vw, 28px);
-
+        position: relative;
+        z-index: 2;
+        
         @media (min-width: 768px) {
+          max-width: 80%;
           margin: 0 0 20px;
         }
 

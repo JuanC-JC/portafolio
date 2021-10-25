@@ -20,7 +20,8 @@ const Footer = () => {
 
       <div className="credit">
         <a href="https://github.com/bchiang7/v4">Designed by Brittany Chiang </a>
-        <a href="https://github.com/isabelajs">Built by Isabela Jimenez</a>
+        <span>|</span>
+        <a href="https://github.com/isabelajs">Built by Juan Camilo JC</a>
       </div>
     </div>
   )

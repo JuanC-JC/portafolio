@@ -45,6 +45,10 @@
     font-size: $fz-xxs;
     line-height: 1;
 
+    span{
+      display: none;
+    }
+
     a {
       &:first-child {
         margin-bottom: 5px;
@@ -55,10 +59,11 @@
       flex-direction: row;
       a:first-child {
         margin-bottom: 0;
-        margin-right: 10px;
-        &:after {
-          content: " | ";
-        }
+      }
+
+      span{
+        display: inherit;
+        margin: 0 10px;
       }
     }
   }
