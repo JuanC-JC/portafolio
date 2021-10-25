@@ -1,6 +1,6 @@
 ---
 title: Rick And Morty
-description: Diseño y desarollo app web bajo modelo SPA con vanillaJS para visualizar y filtrar informacion a cerca de la serie rick and morty
+description: Diseño y desarrollo app web bajo modelo SPA con vanillaJS para visualizar y filtrar informacion a cerca de la serie rick and morty
 date: 2021-03-08T19:37:48.150Z
 image: assets/main.jpg
 github: https://github.com/isabelajs/Api-RickandMorty

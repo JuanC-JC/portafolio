@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, getSrc} from 'gatsby-plugin-image';
 import { Icon } from '@components/icons';
+
 
 import '@styles/components/sections/projects.scss'
 
@@ -16,7 +17,10 @@ export default function Projects() {
             title
             image {
               childImageSharp {
-                gatsbyImageData(width: 700, placeholder: BLURRED)
+                gatsbyImageData(width: 1080, placeholder: BLURRED)
+                original{
+                  src
+                }
               }
             }
             description
@@ -45,6 +49,7 @@ export default function Projects() {
           featuredProjects.reverse().map((node, i) => {
             const { title, external, github, description, mockup , image, tecnologies } = node.frontmatter
             const img = getImage(image);
+            const urlImg = image.childImageSharp.original.src
 
             return (
               <li className="project" key={i} ref={el => (revealProjects.current[i] = el)} >
@@ -53,10 +58,10 @@ export default function Projects() {
                     <p className="project-overline">Featured Project</p>
 
                     <h3 className="project-title">
-                      <a href={external}>{title}</a>
+                      <a href={external ||  urlImg } target='_blank' rel='noreferr' >{title}</a>
                     </h3>
 
-                    <div className="project-description"><p>{description}</p></div>
+                    <div className="project-description" dangerouslySetInnerHTML={{ __html: description }}></div>
 
                     {tecnologies.length && (
                       <ul className="project-tech-list">
@@ -68,19 +73,19 @@ export default function Projects() {
 
                     <div className="project-links">
                       {github && (
-                        <a href={github} rel='noreferr' aria-label="GitHub Link">
+                        <a href={github} rel='noreferr' target='_blank'  aria-label="GitHub Link">
                           <Icon name="GitHub" />
                         </a>
                       )}
                       {
                         mockup && (
-                          <a href={mockup} rel='noreferr' aria-label="Mockup Link">
+                          <a href={mockup} rel='noreferr' target='_blank' aria-label="Mockup Link">
                           <Icon name="Figma" />
                         </a>
                         )
                       }
                       {external && (
-                        <a href={external} rel='noreferr' aria-label="External Link" className="external">
+                        <a href={external} rel='noreferr' target='_blank' aria-label="External Link" className="external">
                           <Icon name="External" />
                         </a>
                       )}
@@ -93,7 +98,7 @@ export default function Projects() {
 
 
                 <div className="project-image">
-                  <a className='notHover' target='_blank'  href={external ? external : github ? github : '#'}>
+                  <a className='notHover' target='_blank'  href={external ? external : github ? github : urlImg }>
                     <GatsbyImage image={img} alt={title} className="img" />
                   </a>
                 </div>
