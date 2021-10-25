@@ -3,6 +3,7 @@
 
 .aboutSection {
   max-width: 900px;
+  will-change: opacity;
 
   .inner {
     display: grid;

@@ -6,7 +6,7 @@ const IndexPage = ({ location }) => {
   return (
     <Layout location={location}>
       <Hero />
-      {/* <About /> */}
+      <About />
       <Jobs />
       <Projects />
       <Contact />

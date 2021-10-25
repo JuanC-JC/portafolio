@@ -8,7 +8,8 @@ import '@styles/components/sections/projects.scss'
 export default function Projects() {
   const data = useStaticQuery(graphql`
     {
-      projects: allMdx(filter: {fileAbsolutePath: {regex: "/projects/"}}) {
+      projects: allMdx(filter: {fileAbsolutePath: {regex: "/projects/"}} 
+        sort: {fields: frontmatter___date}) {
         nodes {
           id
           frontmatter {
@@ -28,7 +29,7 @@ export default function Projects() {
       }
     }
   `)
-  const featuredProjects = data.projects.nodes
+  const featuredProjects = [...data.projects.nodes]
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
 
@@ -41,7 +42,7 @@ export default function Projects() {
 
       <ul className='projectsGrid'>
         {featuredProjects &&
-          featuredProjects.map((node, i) => {
+          featuredProjects.reverse().map((node, i) => {
             const { title, external, github, description, mockup , image, tecnologies } = node.frontmatter
             const img = getImage(image);
 
@@ -67,19 +68,19 @@ export default function Projects() {
 
                     <div className="project-links">
                       {github && (
-                        <a href={github} aria-label="GitHub Link">
+                        <a href={github} rel='noreferr' aria-label="GitHub Link">
                           <Icon name="GitHub" />
                         </a>
                       )}
                       {
                         mockup && (
-                          <a href={mockup} aria-label="Mockup Link">
+                          <a href={mockup} rel='noreferr' aria-label="Mockup Link">
                           <Icon name="Figma" />
                         </a>
                         )
                       }
                       {external && (
-                        <a href={external} aria-label="External Link" className="external">
+                        <a href={external} rel='noreferr' aria-label="External Link" className="external">
                           <Icon name="External" />
                         </a>
                       )}
