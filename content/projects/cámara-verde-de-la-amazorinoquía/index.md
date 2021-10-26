@@ -8,8 +8,8 @@ mockup: https://www.figma.com/file/SxT2SIqqIoudhJQHxxgdxj/Design?node-id=0%3A1
 external: https://camaraverde.netlify.app
 tecnologies:
   - Gatsby
+  - React
   - NetlifyCMS
-  - NodeJS
   - Sass
   - Figma
 ---

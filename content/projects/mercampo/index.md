@@ -10,6 +10,7 @@ mockup: https://www.figma.com/file/uvqM1akBo4pnEgEmaSWjkJ/Dise%C3%B1o?node-id=0%
 external: https://alcampo.netlify.app
 tecnologies:
   - React
+  - Redux
   - NodeJS
   - Firebase
   - Figma
