@@ -8,8 +8,8 @@ export default function Hero() {
       <h2 className="big-heading">Juan Camilo</h2>
       <h3 className="big-heading">i ❤️ code and sleep</h3>
       <p>
-        Soy Ingeniero Industrial, Software developer, y ocacionalmente diseñador, soy un apasiando del
-        aprendizaje y compartir de el, hace parte de este sueño llamado vida.
+        Soy Ingeniero Industrial, Software developer, y ocasionalmente diseñador, soy un apasionado del
+        aprendizaje y compartir de él, hace parte de este sueño llamado vida.
       </p>
       <a
         className="button button--big"

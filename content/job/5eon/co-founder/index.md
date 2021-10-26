@@ -8,5 +8,5 @@ url: https://5eon.netlify.app
 activities:
   - activity: Diseño y prototipado de los productos
   - activity: Producción y control de calidad de los productos
-  - activity: Desarrollo software de control de produccion
+  - activity: Desarrollo software de control de producción
 ---

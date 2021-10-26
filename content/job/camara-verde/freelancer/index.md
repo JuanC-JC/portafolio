@@ -6,7 +6,7 @@ dateRange:
   init: 2021-09-01T19:59:22.768Z
 url: https://5eon.netlify.app
 activities:
-  - activity: Diseño y prototipado de la pagina
-  - activity: Desarrollo de sitio web dinamico, adaptativo (100% responsive) y con sistema de gestion de contenidos (NetlifyCMS)
-  - activity: Configuracion de SEO y posicionamiento web
+  - activity: Diseño y prototipado de la página
+  - activity: Desarrollo de sitio web dinámico, adaptativo (100% responsive) y con sistema de gestión de contenidos (NetlifyCMS)
+  - activity: Configuración de SEO y posicionamiento web
 ---

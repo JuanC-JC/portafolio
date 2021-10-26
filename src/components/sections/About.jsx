@@ -29,15 +29,18 @@ export default function About() {
             </p>
 
             <p>
-              Mi primer acercamiento a la programación inicio gracias a un reto
-              en la universidad, pues debía presentar como proyecto de grado un
-              modelo de gestión de rutas basado en el problema VRP para la
-              optimización del sistema de recolección de RSU, a partir de allí
-              inicie a desarrollar software que me permitiera automatizar y
-              optimizar la mayoria de procesos en los que estuviera a cargo,
-              además de darme el impulso para fundar mi primer emprendimiento
-              llamado {" "}
-              <a href="https://www.instagram.com/5eonn/" target="_blank" rel='noreferrer'>
+              Me gusta afrontar nuevos retos, es por eso que enfoque mi proyecto
+              de grado en el área de modelos matematicos con el fin de generar un modelo
+              de gestión de rutas basado en el problema VRP para la optimización
+              del sistema de recolección de RSU, a partir de allí inicié a
+              desarrollar software que me permitiera automatizar y optimizar la
+              mayoría de procesos en los que estuviera a cargo, además de darme
+              el impulso para fundar mi primer emprendimiento llamado{" "}
+              <a
+                href="https://www.instagram.com/5eonn/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 5EON.
               </a>
             </p>

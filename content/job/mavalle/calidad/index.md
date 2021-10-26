@@ -9,6 +9,6 @@ activities:
   - activity: Acompañamiento, seguimiento y control de los procesos conforme los
       sistemas de gestión ISO 9001:2015, ISO 14001:2015 Y BASC V4:2012
   - activity: Desarrollo y diseño de aplicativos en lenguaje VBA/VB para la
-      automatización de procesos (Calidad, Nomina, Inventario, Mantenimiento y
+      automatización de procesos (Calidad, Nómina, Inventario, Mantenimiento y
       producción)
 ---

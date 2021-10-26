@@ -12,7 +12,7 @@ export default function Contact() {
 
       <p>
         Actualmente estoy buscando nuevas oportunidades y retos, si quieres
-        contactarme mi bandeja de entrada siempre esta disponible. ¡haré lo
+        contactarme mi bandeja de entrada siempre está disponible. ¡Haré lo
         posible por responderte pronto!
       </p>
 
