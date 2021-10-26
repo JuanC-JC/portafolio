@@ -7,7 +7,7 @@ import '../styles/components/header.scss';
 
 const Header = () => {
   const ResumeLink = (
-    <a className=" button button--small" href="/resume.pdf" target="_blank">
+    <a className=" button button--small" href="/resume.pdf" target="_blank" rel='noreferrer'>
       Curriculum
     </a>
   );

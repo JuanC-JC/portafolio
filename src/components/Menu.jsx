@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { navLinks } from '@config';
-import { KEY_CODES } from '@utils';
 import { useOnClickOutside } from '@hooks';
 import {Helmet} from 'react-helmet'
 import '../styles/components/menu.scss';
@@ -64,7 +63,7 @@ const Menu = () => {
             </ol>
           }
 
-          <a href="/resume.pdf" className="button button--big">
+          <a href="/resume.pdf" className="button button--big" target='_blank' rel='noreferrer' >
             Curriculum
           </a>
         </nav>

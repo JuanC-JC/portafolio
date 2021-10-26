@@ -37,7 +37,7 @@ export default function About() {
               optimizar la mayoria de procesos en los que estuviera a cargo,
               además de darme el impulso para fundar mi primer emprendimiento
               llamado {" "}
-              <a href="https://www.instagram.com/5eonn/" target="_blank">
+              <a href="https://www.instagram.com/5eonn/" target="_blank" rel='noreferrer'>
                 5EON.
               </a>
             </p>
