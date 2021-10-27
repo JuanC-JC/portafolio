@@ -6,7 +6,7 @@ export default function Hero() {
     <section className='heroSection'>
       <h1>Hola, mi nombre es </h1>
       <h2 className="big-heading">Juan Camilo</h2>
-      <h3 className="big-heading">i ❤️ code and sleep</h3>
+      <h3 className="big-heading">i ❤️ code and dark modes</h3>
       <p>
         Soy Ingeniero Industrial, Software developer, y ocasionalmente diseñador, soy un apasionado del
         aprendizaje y compartir de él, hace parte de este sueño llamado vida.
