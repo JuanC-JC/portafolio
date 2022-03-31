@@ -7,4 +7,5 @@ dateRange:
 url: https://www.bewe.io/co/inicio/
 activities:
   - activity: Desarrollo plataforma sass ( Mongo, express, react, backbone)
+  - activity: Prueba jose
 ---
